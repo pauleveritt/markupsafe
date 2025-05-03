@@ -4,10 +4,7 @@ import collections.abc as cabc
 import string
 import typing as t
 
-try:
-    from ._speedups import _escape_inner
-except ImportError:
-    from ._native import _escape_inner
+from ._native import _escape_inner
 
 if t.TYPE_CHECKING:
     import typing_extensions as te
